@@ -221,8 +221,13 @@ with tab1:
 
 
     with st.expander("🛍️ Retail Store Supervisor – Burkes Outlet (Irving, TX | June – August 2022)"):
-        st.image("burkes.jpg", width=300)
-        st.markdown("""
+        from pathlib import Path
+        image_path = Path(__file__).parent / "assets" / "burkes.jpg"
+        if image_path.is_file():
+            st.image(image_path, width=300)
+        else:
+            st.error(f"Image not found at {image_path}")        
+            st.markdown("""
                     In 2022, while searching for additional opportunities across Irving, I joined **Burkes Outlet** as a **Retail Store Supervisor**. The team was impressed by my initiative and drive, and I was quickly trusted with leadership responsibilities.  
                     **Key Contributions:**  
                     - Supervised **daily retail operations**, ensuring smooth workflow and compliance with company standards.  
@@ -876,6 +881,7 @@ with tab10:
     st.subheader("Download Simulated Dataset")
     csv = df.to_csv(index=False).encode("utf-8")
     st.download_button("⬇️ Download Mission Definition Review (MDR)", data=csv, file_name="MDR.pdf", mime="text/pdf")
+
 
 
 
