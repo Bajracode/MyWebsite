@@ -199,8 +199,13 @@ with tab1:
         """)
 
     with st.expander("🚀 NASA L’SPACE Academy (Remote | May – Aug 2024)"):
-        st.image("lspace.png", width=200)
-        st.markdown("""
+        from pathlib import Path
+        image_path = Path(__file__).parent / "assets" / "lspace.png"
+        if image_path.is_file():
+            st.image(image_path, width=300)
+        else:
+            st.error(f"Image not found at {image_path}")        
+            st.markdown("""
                     In 2024, I joined **NASA’s L’SPACE Academy**, where I contributed to **mission planning and systems design** for a lunar rover project.  
                     This experience challenged me to bridge technical analysis with team collaboration, working alongside students from diverse disciplines to solve complex design problems.  
                     
@@ -871,6 +876,7 @@ with tab10:
     st.subheader("Download Simulated Dataset")
     csv = df.to_csv(index=False).encode("utf-8")
     st.download_button("⬇️ Download Mission Definition Review (MDR)", data=csv, file_name="MDR.pdf", mime="text/pdf")
+
 
 
 
