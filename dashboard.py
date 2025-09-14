@@ -147,7 +147,7 @@ st.sidebar.link_button("🧠 GitHub", GITHUB)
 
 # === TAB 1: ABOUT ME ===
 with tab1:
-    combined = combine_images([("UTA.jpg", 300), ("pho1.jpg", 300), ("JPM.jpg", 300)])
+    combined = combine_images([("assets/UTA.jpg", 300), ("assets/pho1.jpg", 300), ("assets/JPM.jpg", 300)])
     st.image(combined, use_container_width=False)
 
     st.markdown("## 👋 Who am I?")
@@ -861,3 +861,4 @@ with tab10:
     st.subheader("Download Simulated Dataset")
     csv = df.to_csv(index=False).encode("utf-8")
     st.download_button("⬇️ Download Mission Definition Review (MDR)", data=csv, file_name="MDR.pdf", mime="text/pdf")
+
