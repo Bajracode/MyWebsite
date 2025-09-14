@@ -623,9 +623,9 @@ with tab6:
     st.markdown("### 📓 Poems and Short Stories")
     st.link_button("Laurel Crown of Florence", "https://docs.google.com/document/d/15pfmXz-BYTDSDe-V5B9CbuCWdeTqrRJCI1CoCDOGaDY/edit?usp=sharing")
     st.link_button("Castella", "https://docs.google.com/document/d/12HoqldBM9bv2NIVOw_jRA0y0VAnge6_-TXn_laL6o70/edit?usp=sharing")
-    st.link_button("Seaheart", "")
+    st.link_button("Seaheart", "https://docs.google.com/document/d/15abXRfLO5HVcf1jlYwVxQgVxyTv_7Oq3qq9XBsc8U7g/edit?usp=sharing")
     st.link_button("Value of Life", "https://docs.google.com/document/d/1Gh0EPCR3JYS2o9NR2GwQyYXgnwSFOuEJvMwgQN-6mWU/edit?usp=sharing")
-    st.image("Seaheart_cover.png", caption="Seaheart cover", width=300)
+    st.image("assets/Seaheart_cover.png", caption="Seaheart cover", width=300)
 
 st.subheader("🌍 My Travel Timeline")
 
@@ -881,6 +881,7 @@ with tab10:
     st.subheader("Download Simulated Dataset")
     csv = df.to_csv(index=False).encode("utf-8")
     st.download_button("⬇️ Download Mission Definition Review (MDR)", data=csv, file_name="MDR.pdf", mime="text/pdf")
+
 
 
 
