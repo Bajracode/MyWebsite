@@ -183,9 +183,14 @@ with tab1:
         """)
 
     with st.expander("📦 Amazon (Irving, TX | June 2023 – June 2025)"):
-        st.image("amazon.png", width=300)
-        st.markdown("""
-        At the same time, I worked as an Supply chain associate at an Amazon warehouse. Balancing this with my studies—like taking a Data Mining exam and then going straight to a shift—pushed me to become disciplined and reliable.  
+        from pathlib import Path
+        image_path = Path(__file__).parent / "assets" / "amazon.png"
+        if image_path.is_file():
+            st.image(image_path, width=300)
+        else:
+            st.error(f"Image not found at {image_path}")        
+            st.markdown("""
+            At the same time, I worked as an Supply chain associate at an Amazon warehouse. Balancing this with my studies—like taking a Data Mining exam and then going straight to a shift—pushed me to become disciplined and reliable.  
         Amazon offered to pay for my tuition which greatly helped me continue on my studies.
         **Key takeaways:**  
         - Hands-on experience in inventory management & workflow coordination  
@@ -866,5 +871,6 @@ with tab10:
     st.subheader("Download Simulated Dataset")
     csv = df.to_csv(index=False).encode("utf-8")
     st.download_button("⬇️ Download Mission Definition Review (MDR)", data=csv, file_name="MDR.pdf", mime="text/pdf")
+
 
 
