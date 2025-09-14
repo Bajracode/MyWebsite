@@ -165,9 +165,14 @@ with tab1:
     While I am still growing my expertise, I am eager to learn quickly, apply myself to real-world projects, and contribute as a dedicated member of your team.
     """)
     with st.expander("📊 JPMorgan – Current Role"):
-        st.image("JPM.jpg", width=300)
-        st.markdown("""
-        I’m currently working at JPMorgan in a datahouse environment, where I handle large volumes of information to ensure accuracy and consistency.  
+        from pathlib import Path
+        image_path = Path(__file__).parent / "assets" / "JPM.jpg"
+        if image_path.is_file():
+            st.image(image_path, width=300)
+        else:
+            st.error(f"Image not found at {image_path}")
+            st.markdown("""
+            I’m currently working at JPMorgan in a datahouse environment, where I handle large volumes of information to ensure accuracy and consistency.  
 
         My responsibilities include:  
         - Processing and validating data  
@@ -861,4 +866,5 @@ with tab10:
     st.subheader("Download Simulated Dataset")
     csv = df.to_csv(index=False).encode("utf-8")
     st.download_button("⬇️ Download Mission Definition Review (MDR)", data=csv, file_name="MDR.pdf", mime="text/pdf")
+
 
