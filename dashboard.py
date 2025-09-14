@@ -57,7 +57,7 @@ def add_bg_from_local(image_file):
 # Background Image (safe)
 # ----------------------
 try:
-    add_bg_from_local("background.jpg")
+    add_bg_from_local("assets/background.jpg")
 except FileNotFoundError:
     st.warning("⚠️ Background image not found, continuing without it.")
 
@@ -881,6 +881,7 @@ with tab10:
     st.subheader("Download Simulated Dataset")
     csv = df.to_csv(index=False).encode("utf-8")
     st.download_button("⬇️ Download Mission Definition Review (MDR)", data=csv, file_name="MDR.pdf", mime="text/pdf")
+
 
 
 
