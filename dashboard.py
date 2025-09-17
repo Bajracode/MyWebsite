@@ -626,32 +626,23 @@ with tab6:
     st.link_button("Seaheart", "https://docs.google.com/document/d/15abXRfLO5HVcf1jlYwVxQgVxyTv_7Oq3qq9XBsc8U7g/edit?usp=sharing")
     st.link_button("Value of Life", "https://docs.google.com/document/d/1Gh0EPCR3JYS2o9NR2GwQyYXgnwSFOuEJvMwgQN-6mWU/edit?usp=sharing")
     st.image("assets/Seaheart_cover.png", caption="Seaheart cover", width=300)
-
-st.subheader("🌍 My Travel Timeline")
-
-with st.expander("✈️ 2022 Summer – Cozumel, Mexico"):
-    st.write("Relaxed on white-sand beaches, explored cenotes, and practiced slow travel.")
-
-with st.expander("🌲 2022 Fall – Broken Bow, Oklahoma"):
-    st.write("Cabin retreat with friends — hiking and kayaking sparked my interest in nature photography.")
-
-with st.expander("🏙️ 2023 Summer – Manhattan, New York"):
-    st.write("Solo trip exploring tech culture, museums, and reflecting on personal goals.")
-
-with st.expander("🌧️ 2023 Fall – Cancun, Mexico"):
-    st.write("Balanced city life with nature escapes — from local parks to cultural landmarks.")
-
-with st.expander("☀️ 2024 Summer – Rockwall, Texas"):
-    st.write("Discovered local scenery, enjoyed lakeside views, and took short day hikes.")
-
-with st.expander("🌧️ 2024 Fall – Seattle, Washington"):
-    st.write("Blended tech and nature — Pike Place to lush nearby trails.")
-
-with st.expander("🕉️ 2025 Summer – Kathmandu, Nepal"):
-    st.write("Reconnected with family and heritage, visited temples, and explored historic sites.")
-
-with st.expander("🏔️ 2025 Fall – Vail, Colorado"):
-    st.write("Mountain retreat — fresh air, hiking, and deep relaxation.")
+    st.subheader("🌍 My Travel Timeline")
+    with st.expander("✈️ 2022 Summer – Cozumel, Mexico"):
+        st.write("Relaxed on white-sand beaches, explored cenotes, and practiced slow travel.")
+    with st.expander("🌲 2022 Fall – Broken Bow, Oklahoma"):
+        st.write("Cabin retreat with friends — hiking and kayaking sparked my interest in nature photography.")
+    with st.expander("🏙️ 2023 Summer – Manhattan, New York"):
+        st.write("Solo trip exploring tech culture, museums, and reflecting on personal goals.")
+    with st.expander("🌧️ 2023 Fall – Cancun, Mexico"):
+        st.write("Balanced city life with nature escapes — from local parks to cultural landmarks.")
+    with st.expander("☀️ 2024 Summer – Rockwall, Texas"):
+        st.write("Discovered local scenery, enjoyed lakeside views, and took short day hikes.")
+    with st.expander("🌧️ 2024 Fall – Seattle, Washington"):
+        st.write("Blended tech and nature — Pike Place to lush nearby trails.")
+    with st.expander("🕉️ 2025 Summer – Kathmandu, Nepal"):
+        st.write("Reconnected with family and heritage, visited temples, and explored historic sites.")
+    with st.expander("🏔️ 2025 Fall – Vail, Colorado"):
+        st.write("Mountain retreat — fresh air, hiking, and deep relaxation.")
 
 
 # === TAB 7: ORGANIZATIONS ===
@@ -881,6 +872,7 @@ with tab10:
     st.subheader("Download Simulated Dataset")
     csv = df.to_csv(index=False).encode("utf-8")
     st.download_button("⬇️ Download Mission Definition Review (MDR)", data=csv, file_name="MDR.pdf", mime="text/pdf")
+
 
 
 
